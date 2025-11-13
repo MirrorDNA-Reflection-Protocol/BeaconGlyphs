@@ -1,0 +1,9 @@
+<!-- Mirror -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Mirror</title>
+  <desc>Self-reflection or mirror operation</desc>
+  <ellipse cx="12" cy="12" rx="8" ry="10"/>
+  <line x1="12" y1="2" x2="12" y2="22"/>
+  <path d="M8 8 C10 6, 14 6, 16 8"/>
+  <path d="M8 16 C10 18, 14 18, 16 16"/>
+</svg>

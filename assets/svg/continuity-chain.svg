@@ -1,0 +1,12 @@
+<!-- Continuity Chain -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Continuity Chain</title>
+  <desc>Unbroken continuity chain - persistent memory linkage</desc>
+  <!-- First link -->
+  <ellipse cx="7" cy="12" rx="3" ry="5" transform="rotate(-45 7 12)"/>
+  <!-- Second link -->
+  <ellipse cx="17" cy="12" rx="3" ry="5" transform="rotate(45 17 12)"/>
+  <!-- Connection -->
+  <line x1="9" y1="10" x2="15" y2="10"/>
+  <line x1="9" y1="14" x2="15" y2="14"/>
+</svg>

@@ -1,0 +1,7 @@
+<!-- Infinite Continuity -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Infinite Continuity</title>
+  <desc>Eternal persistence without termination</desc>
+  <path d="M18.178 8c2.806 0 4.822 2.686 4.822 4.5 0 1.814-2.016 4.5-4.822 4.5-2.806 0-4.822-2.686-4.822-4.5L12 12l1.356.5c0-1.814 2.016-4.5 4.822-4.5zM5.822 8C3.016 8 1 10.686 1 12.5 1 14.314 3.016 17 5.822 17c2.806 0 4.822-2.686 4.822-4.5L12 12l-1.356-.5C10.644 9.686 8.628 8 5.822 8z"/>
+  <path d="M12 12c0-1.5-1.5-3-3.5-3S5 10.5 5 12s1.5 3 3.5 3 3.5-1.5 3.5-3zm0 0c0 1.5 1.5 3 3.5 3s3.5-1.5 3.5-3-1.5-3-3.5-3-3.5 1.5-3.5 3z"/>
+</svg>

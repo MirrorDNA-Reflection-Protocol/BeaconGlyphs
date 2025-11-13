@@ -38,43 +38,54 @@ LingOS (reflective OS)
 
 ## Quick Start
 
-### 1. Browse the Glyph Registry
+### 1. Install
 
 ```bash
-# View all available glyphs
-cat src/glyphs/registry.json
-
-# Or explore by category
-ls src/glyphs/
+npm install beaconglyphs
+# or
+yarn add beaconglyphs
 ```
 
 ### 2. Use in Your Project
 
+**React:**
+```tsx
+import { BeaconGlyph } from 'beaconglyphs/react';
+import 'beaconglyphs/css';
+
+function App() {
+  return (
+    <div>
+      <BeaconGlyph id="continuity.chain" size="lg" />
+      <BeaconGlyph id="identity.dna" color="primary" />
+    </div>
+  );
+}
+```
+
+**HTML + CSS:**
+```html
+<link rel="stylesheet" href="beaconglyphs/css/beaconglyphs.css">
+
+<span class="bg-glyph bg-continuity-chain bg-size-lg"></span>
+<span class="bg-glyph bg-identity-dna bg-color-primary"></span>
+```
+
+**Python:**
 ```python
-# Python example
 from beaconglyphs import get_glyph
 
-# Get a continuity marker glyph
 glyph = get_glyph("continuity.chain")
 print(glyph.unicode)  # → ⛓️
-print(glyph.description)  # → "Unbroken continuity chain"
 ```
 
-```javascript
-// JavaScript example
-import { getGlyph } from 'beaconglyphs';
-
-const glyph = getGlyph('continuity.chain');
-console.log(glyph.svg);  // SVG path data
-```
-
-### 3. Explore Examples
+### 3. Explore
 
 ```bash
-# View usage examples
-ls examples/
+# Component showcase
+open examples/component-showcase.html
 
-# Run example renderer
+# Python examples
 python examples/render_glyphs.py
 ```
 
@@ -89,56 +100,105 @@ python examples/render_glyphs.py
 | **Reflection** | Mirror operations, self-reference | 🪞 ⥁ ⇄ |
 | **Governance** | Trust, safety, compliance | ⚖️ 🔒 ✦ |
 
-## Documentation
+## Deliverables
 
+### 🎨 Vector Glyph Pack
+- **25 production SVG files** in `assets/svg/`
+- Scalable, semantic, accessible
+- Ready for web, mobile, and print
+
+### 💅 CSS Component Library
+- Complete CSS framework in `components/css/`
+- Utility classes, badges, status indicators
+- Dark mode support, animations
+- Zero dependencies
+
+### ⚛️ React Components
+- TypeScript-first React library in `components/react/`
+- `<BeaconGlyph>`, `<GlyphBadge>`, `<GlyphStatus>`, `<GlyphGroup>`
+- Fully typed with IntelliSense support
+- Tree-shakeable, optimized bundle
+
+### 📚 Design System Documentation
+- [**Design System Guide**](docs/design/design-system.md) - Complete design tokens, patterns, guidelines
 - [**Overview & Philosophy**](docs/overview.md) - Design principles and visual language
 - [**Architecture**](docs/architecture.md) - Schema structure and registry format
 - [**Usage Guide**](docs/usage.md) - Integration patterns and best practices
 - [**Glyph Catalog**](docs/catalog.md) - Complete visual reference
 
-## Installation
+## Installation & Usage
 
-BeaconGlyphs is a **reference and schema repository**. It does not require traditional installation.
+### NPM Package (Recommended)
 
-**To use the glyph definitions:**
+```bash
+npm install beaconglyphs
+# or
+yarn add beaconglyphs
+```
+
+Then import components:
+```tsx
+import { BeaconGlyph } from 'beaconglyphs/react';
+import 'beaconglyphs/css';
+```
+
+### Direct Usage (Assets Only)
 
 1. Clone this repository
-2. Import the glyph registry (`src/glyphs/registry.json`)
-3. Use the schema to validate your own glyph usage
-4. Reference the visual catalog in `docs/catalog.md`
+2. Copy `assets/svg/` to your project
+3. Import registry: `import registry from 'beaconglyphs/registry'`
+4. Use CSS: `<link href="components/css/beaconglyphs.css">`
 
-**For development integration:**
+### Python Integration
+
 ```bash
-# Python
 pip install -e .
+```
 
-# JavaScript/Node
-npm link
+```python
+from beaconglyphs import get_glyph
+glyph = get_glyph("continuity.chain")
 ```
 
 ## Project Structure
 
 ```
 BeaconGlyphs/
-├── README.md                 ← You are here
+├── README.md                        ← You are here
+├── assets/
+│   └── svg/                         ← 25 vector glyph SVG files
+├── components/
+│   ├── css/
+│   │   └── beaconglyphs.css         ← Complete CSS library
+│   └── react/
+│       ├── BeaconGlyph.tsx          ← Main React component
+│       ├── GlyphBadge.tsx           ← Badge component
+│       ├── GlyphStatus.tsx          ← Status indicator
+│       ├── GlyphGroup.tsx           ← Group component
+│       └── index.ts                 ← Exports
 ├── docs/
-│   ├── overview.md          ← Design philosophy
-│   ├── architecture.md      ← Schema and structure
-│   ├── usage.md             ← Integration guide
-│   └── catalog.md           ← Visual glyph reference
+│   ├── design/
+│   │   └── design-system.md         ← Complete design system
+│   ├── overview.md                  ← Design philosophy
+│   ├── architecture.md              ← Schema and structure
+│   ├── usage.md                     ← Integration guide
+│   └── catalog.md                   ← Visual glyph reference
 ├── src/
 │   ├── schema/
-│   │   └── glyph_schema.json    ← JSON schema for glyphs
+│   │   └── glyph_schema.json        ← JSON schema for glyphs
 │   └── glyphs/
-│       └── registry.json        ← Complete glyph registry
+│       └── registry.json            ← Complete glyph registry
 ├── examples/
-│   ├── render_glyphs.py         ← Python usage example
-│   ├── web_display.html         ← Web integration example
-│   └── glyphtrail_integration/  ← Glyphtrail usage
+│   ├── component-showcase.html      ← Interactive component demo
+│   ├── render_glyphs.py             ← Python usage example
+│   ├── web_display.html             ← Web integration example
+│   └── glyphtrail_integration/      ← Glyphtrail usage
 ├── tests/
 │   └── test_schema_validation.py
-└── tooling/
-    └── validate_registry.py     ← Glyph validation tool
+├── tooling/
+│   └── validate_registry.py         ← Glyph validation tool
+├── package.json                     ← NPM package config
+└── tsconfig.json                    ← TypeScript config
 ```
 
 ## Design Principles
