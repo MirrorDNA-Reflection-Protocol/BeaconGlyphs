@@ -1,0 +1,8 @@
+# BeaconGlyphs Development Dependencies
+
+# Testing
+pytest>=7.0.0
+pytest-cov>=4.0.0
+
+# JSON Schema validation (optional, for advanced validation)
+jsonschema>=4.0.0

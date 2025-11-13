@@ -1,0 +1,404 @@
+{
+  "version": "1.0.0",
+  "description": "BeaconGlyphs Registry - Visual symbols for the MirrorDNA ecosystem",
+  "lastUpdated": "2025-11-13",
+  "glyphs": [
+    {
+      "id": "continuity.chain",
+      "category": "continuity",
+      "name": "Continuity Chain",
+      "description": "Represents unbroken session continuity and persistent memory linkage",
+      "representations": {
+        "unicode": "⛓️",
+        "text": "[CHAIN]",
+        "emoji": "⛓️"
+      },
+      "metadata": {
+        "tags": ["continuity", "session", "persistence", "memory"],
+        "useCases": ["glyphtrail", "lingos", "active_mirror_os"],
+        "accessibility": "Continuity chain - indicates unbroken session link",
+        "relatedGlyphs": ["continuity.link", "continuity.infinity"]
+      }
+    },
+    {
+      "id": "continuity.link",
+      "category": "continuity",
+      "name": "Single Link",
+      "description": "Individual connection point in a continuity sequence",
+      "representations": {
+        "unicode": "🔗",
+        "text": "[LINK]",
+        "emoji": "🔗"
+      },
+      "metadata": {
+        "tags": ["continuity", "connection", "node"],
+        "useCases": ["glyphtrail", "logs"],
+        "accessibility": "Link symbol - single continuity connection"
+      }
+    },
+    {
+      "id": "continuity.infinity",
+      "category": "continuity",
+      "name": "Infinite Continuity",
+      "description": "Eternal or indefinite persistence without termination",
+      "representations": {
+        "unicode": "∞",
+        "text": "[INF]",
+        "emoji": "♾️"
+      },
+      "metadata": {
+        "tags": ["continuity", "eternal", "infinite"],
+        "useCases": ["mirrordna_protocol", "ui"],
+        "accessibility": "Infinity symbol - eternal continuity"
+      }
+    },
+    {
+      "id": "continuity.broken",
+      "category": "continuity",
+      "name": "Broken Chain",
+      "description": "Indicates a break in continuity or session discontinuity",
+      "representations": {
+        "unicode": "⊗",
+        "text": "[BREAK]"
+      },
+      "metadata": {
+        "tags": ["discontinuity", "break", "warning"],
+        "useCases": ["glyphtrail", "logs"],
+        "accessibility": "Crossed circle - broken continuity chain"
+      }
+    },
+    {
+      "id": "identity.dna",
+      "category": "identity",
+      "name": "DNA Helix",
+      "description": "Represents agent identity and MirrorDNA signature",
+      "representations": {
+        "unicode": "🧬",
+        "text": "[DNA]",
+        "emoji": "🧬"
+      },
+      "metadata": {
+        "tags": ["identity", "agent", "dna", "signature"],
+        "useCases": ["mirrordna_protocol", "active_mirror_os", "ui"],
+        "accessibility": "DNA helix - agent identity marker",
+        "relatedGlyphs": ["identity.mask", "identity.diamond"]
+      }
+    },
+    {
+      "id": "identity.mask",
+      "category": "identity",
+      "name": "Persona Mask",
+      "description": "Agent personality or role representation",
+      "representations": {
+        "unicode": "🎭",
+        "text": "[MASK]",
+        "emoji": "🎭"
+      },
+      "metadata": {
+        "tags": ["identity", "persona", "role", "character"],
+        "useCases": ["active_mirror_os", "ui"],
+        "accessibility": "Theater masks - agent persona indicator"
+      }
+    },
+    {
+      "id": "identity.diamond",
+      "category": "identity",
+      "name": "Identity Diamond",
+      "description": "Unique identity marker, crystallized self",
+      "representations": {
+        "unicode": "◈",
+        "text": "[ID]"
+      },
+      "metadata": {
+        "tags": ["identity", "unique", "signature"],
+        "useCases": ["mirrordna_protocol", "api"],
+        "accessibility": "Diamond symbol - unique identity marker"
+      }
+    },
+    {
+      "id": "state.verified",
+      "category": "state",
+      "name": "Verified",
+      "description": "Indicates verified or validated state",
+      "representations": {
+        "unicode": "✓",
+        "text": "[OK]"
+      },
+      "metadata": {
+        "tags": ["state", "verified", "success", "valid"],
+        "useCases": ["ui", "logs", "api"],
+        "accessibility": "Check mark - verified state"
+      },
+      "variants": {
+        "success": "✅",
+        "active": "☑"
+      }
+    },
+    {
+      "id": "state.active",
+      "category": "state",
+      "name": "Active State",
+      "description": "System or component is actively running",
+      "representations": {
+        "unicode": "⚡",
+        "text": "[ACTIVE]",
+        "emoji": "⚡"
+      },
+      "metadata": {
+        "tags": ["state", "active", "running", "energy"],
+        "useCases": ["ui", "logs"],
+        "accessibility": "Lightning bolt - active state indicator"
+      }
+    },
+    {
+      "id": "state.protected",
+      "category": "state",
+      "name": "Protected",
+      "description": "Trust boundary or protected state",
+      "representations": {
+        "unicode": "🛡️",
+        "text": "[SAFE]",
+        "emoji": "🛡️"
+      },
+      "metadata": {
+        "tags": ["state", "trust", "safety", "protection"],
+        "useCases": ["ui", "active_mirror_os"],
+        "accessibility": "Shield - protected state"
+      }
+    },
+    {
+      "id": "state.locked",
+      "category": "state",
+      "name": "Locked",
+      "description": "Secured or access-controlled state",
+      "representations": {
+        "unicode": "🔒",
+        "text": "[LOCK]",
+        "emoji": "🔒"
+      },
+      "metadata": {
+        "tags": ["state", "security", "locked", "private"],
+        "useCases": ["ui", "api"],
+        "accessibility": "Lock - secured state"
+      },
+      "variants": {
+        "active": "🔓"
+      }
+    },
+    {
+      "id": "events.flag",
+      "category": "events",
+      "name": "Event Flag",
+      "description": "Marks a significant event or milestone",
+      "representations": {
+        "unicode": "⚑",
+        "text": "[FLAG]"
+      },
+      "metadata": {
+        "tags": ["event", "milestone", "marker"],
+        "useCases": ["glyphtrail", "logs"],
+        "accessibility": "Flag - event milestone marker"
+      }
+    },
+    {
+      "id": "events.cycle",
+      "category": "events",
+      "name": "Cycle Event",
+      "description": "Recurring or cyclical event pattern",
+      "representations": {
+        "unicode": "⟳",
+        "text": "[CYCLE]"
+      },
+      "metadata": {
+        "tags": ["event", "cycle", "repeat", "loop"],
+        "useCases": ["logs", "api"],
+        "accessibility": "Circular arrow - recurring event"
+      }
+    },
+    {
+      "id": "events.warning",
+      "category": "events",
+      "name": "Warning Event",
+      "description": "Caution or attention required event",
+      "representations": {
+        "unicode": "⚠",
+        "text": "[WARN]",
+        "emoji": "⚠️"
+      },
+      "metadata": {
+        "tags": ["event", "warning", "caution", "alert"],
+        "useCases": ["ui", "logs"],
+        "accessibility": "Warning triangle - caution indicator"
+      }
+    },
+    {
+      "id": "events.start",
+      "category": "events",
+      "name": "Start Event",
+      "description": "Beginning of a session or process",
+      "representations": {
+        "unicode": "▶",
+        "text": "[START]"
+      },
+      "metadata": {
+        "tags": ["event", "start", "begin", "initiate"],
+        "useCases": ["glyphtrail", "logs"],
+        "accessibility": "Play symbol - start event"
+      }
+    },
+    {
+      "id": "events.stop",
+      "category": "events",
+      "name": "Stop Event",
+      "description": "End of a session or process",
+      "representations": {
+        "unicode": "■",
+        "text": "[STOP]"
+      },
+      "metadata": {
+        "tags": ["event", "stop", "end", "terminate"],
+        "useCases": ["glyphtrail", "logs"],
+        "accessibility": "Stop square - termination event"
+      }
+    },
+    {
+      "id": "reflection.mirror",
+      "category": "reflection",
+      "name": "Mirror",
+      "description": "Self-reflection or mirror operation",
+      "representations": {
+        "unicode": "🪞",
+        "text": "[MIRROR]",
+        "emoji": "🪞"
+      },
+      "metadata": {
+        "tags": ["reflection", "mirror", "self", "introspection"],
+        "useCases": ["lingos", "active_mirror_os", "ui"],
+        "accessibility": "Mirror - self-reflection indicator"
+      }
+    },
+    {
+      "id": "reflection.bidirectional",
+      "category": "reflection",
+      "name": "Bidirectional",
+      "description": "Two-way reflection or mutual mirroring",
+      "representations": {
+        "unicode": "⇄",
+        "text": "[<->]"
+      },
+      "metadata": {
+        "tags": ["reflection", "bidirectional", "mutual", "exchange"],
+        "useCases": ["mirrordna_protocol", "api"],
+        "accessibility": "Double arrow - bidirectional reflection"
+      }
+    },
+    {
+      "id": "reflection.recursive",
+      "category": "reflection",
+      "name": "Recursive",
+      "description": "Self-referential or recursive reflection",
+      "representations": {
+        "unicode": "⥁",
+        "text": "[REC]"
+      },
+      "metadata": {
+        "tags": ["reflection", "recursive", "self-reference"],
+        "useCases": ["lingos", "logs"],
+        "accessibility": "Recursive arrow - self-referential operation"
+      }
+    },
+    {
+      "id": "governance.balance",
+      "category": "governance",
+      "name": "Balance",
+      "description": "Governance balance, fairness, or justice",
+      "representations": {
+        "unicode": "⚖️",
+        "text": "[BALANCE]",
+        "emoji": "⚖️"
+      },
+      "metadata": {
+        "tags": ["governance", "balance", "justice", "fairness"],
+        "useCases": ["ui", "mirrordna_protocol"],
+        "accessibility": "Scales - governance balance indicator"
+      }
+    },
+    {
+      "id": "governance.certified",
+      "category": "governance",
+      "name": "Certified",
+      "description": "Compliance certification or governance approval",
+      "representations": {
+        "unicode": "✦",
+        "text": "[CERT]"
+      },
+      "metadata": {
+        "tags": ["governance", "certified", "compliant", "approved"],
+        "useCases": ["mirrordna_protocol", "api"],
+        "accessibility": "Star - certification mark"
+      }
+    },
+    {
+      "id": "navigation.home",
+      "category": "navigation",
+      "name": "Home",
+      "description": "Return to origin or home state",
+      "representations": {
+        "unicode": "⌂",
+        "text": "[HOME]"
+      },
+      "metadata": {
+        "tags": ["navigation", "home", "origin", "base"],
+        "useCases": ["ui"],
+        "accessibility": "House - home navigation"
+      }
+    },
+    {
+      "id": "navigation.forward",
+      "category": "navigation",
+      "name": "Forward",
+      "description": "Move forward in sequence or time",
+      "representations": {
+        "unicode": "→",
+        "text": "[NEXT]"
+      },
+      "metadata": {
+        "tags": ["navigation", "forward", "next", "progress"],
+        "useCases": ["ui", "glyphtrail"],
+        "accessibility": "Right arrow - forward navigation"
+      }
+    },
+    {
+      "id": "data.memory",
+      "category": "data",
+      "name": "Memory",
+      "description": "Stored memory or data persistence",
+      "representations": {
+        "unicode": "💾",
+        "text": "[MEM]",
+        "emoji": "💾"
+      },
+      "metadata": {
+        "tags": ["data", "memory", "storage", "persistence"],
+        "useCases": ["ui", "logs"],
+        "accessibility": "Floppy disk - memory storage"
+      }
+    },
+    {
+      "id": "data.stream",
+      "category": "data",
+      "name": "Data Stream",
+      "description": "Flowing data or streaming information",
+      "representations": {
+        "unicode": "〰️",
+        "text": "[STREAM]",
+        "emoji": "〰️"
+      },
+      "metadata": {
+        "tags": ["data", "stream", "flow", "continuous"],
+        "useCases": ["api", "logs"],
+        "accessibility": "Wave - data stream indicator"
+      }
+    }
+  ]
+}

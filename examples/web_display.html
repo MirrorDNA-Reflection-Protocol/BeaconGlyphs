@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeaconGlyphs - Web Display Example</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            padding: 2rem;
+        }
+
+        h1 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+            font-size: 2.5rem;
+        }
+
+        .subtitle {
+            color: #666;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .section {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .section h2 {
+            color: #764ba2;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .glyph-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .glyph-card {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            border: 2px solid #e0e0e0;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .glyph-card:hover {
+            border-color: #667eea;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+        }
+
+        .glyph-symbol {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .glyph-name {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 0.25rem;
+        }
+
+        .glyph-id {
+            font-size: 0.85rem;
+            color: #999;
+            font-family: 'Courier New', monospace;
+        }
+
+        .status-demo {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .status-item {
+            background: white;
+            padding: 1rem;
+            border-radius: 6px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .status-indicators {
+            font-size: 1.5rem;
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .timeline {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+
+        .timeline-content {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            font-size: 2rem;
+            padding: 0.5rem 0;
+        }
+
+        .event-log {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+        }
+
+        .event-log-entry {
+            padding: 0.5rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .event-log-entry:last-child {
+            border-bottom: none;
+        }
+
+        .error {
+            color: #d32f2f;
+        }
+
+        .success {
+            color: #388e3c;
+        }
+
+        .info {
+            color: #1976d2;
+        }
+
+        footer {
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 2px solid #eee;
+            text-align: center;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧬 BeaconGlyphs</h1>
+        <p class="subtitle">Visual and symbolic language for the MirrorDNA ecosystem</p>
+
+        <div class="section">
+            <h2>Glyph Categories</h2>
+            <div id="categories"></div>
+        </div>
+
+        <div class="section">
+            <h2>System Status Demo</h2>
+            <div class="status-demo" id="statusDemo"></div>
+        </div>
+
+        <div class="section">
+            <h2>Continuity Timeline</h2>
+            <div class="timeline">
+                <div class="timeline-content" id="timeline"></div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Event Log</h2>
+            <div class="event-log" id="eventLog"></div>
+        </div>
+
+        <footer>
+            <p><strong>BeaconGlyphs</strong> - Making continuity visible, one symbol at a time.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem;">
+                Part of the MirrorDNA-Reflection-Protocol ecosystem
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        // In a real application, you would fetch this from the registry.json file
+        // For this demo, we'll inline a subset of the glyphs
+        const glyphRegistry = {
+            "glyphs": [
+                {
+                    "id": "continuity.chain",
+                    "category": "continuity",
+                    "name": "Continuity Chain",
+                    "representations": {"unicode": "⛓️", "text": "[CHAIN]"}
+                },
+                {
+                    "id": "continuity.link",
+                    "category": "continuity",
+                    "name": "Single Link",
+                    "representations": {"unicode": "🔗", "text": "[LINK]"}
+                },
+                {
+                    "id": "continuity.infinity",
+                    "category": "continuity",
+                    "name": "Infinite Continuity",
+                    "representations": {"unicode": "∞", "text": "[INF]"}
+                },
+                {
+                    "id": "identity.dna",
+                    "category": "identity",
+                    "name": "DNA Helix",
+                    "representations": {"unicode": "🧬", "text": "[DNA]"}
+                },
+                {
+                    "id": "identity.mask",
+                    "category": "identity",
+                    "name": "Persona Mask",
+                    "representations": {"unicode": "🎭", "text": "[MASK]"}
+                },
+                {
+                    "id": "state.verified",
+                    "category": "state",
+                    "name": "Verified",
+                    "representations": {"unicode": "✓", "text": "[OK]"}
+                },
+                {
+                    "id": "state.active",
+                    "category": "state",
+                    "name": "Active State",
+                    "representations": {"unicode": "⚡", "text": "[ACTIVE]"}
+                },
+                {
+                    "id": "state.protected",
+                    "category": "state",
+                    "name": "Protected",
+                    "representations": {"unicode": "🛡️", "text": "[SAFE]"}
+                },
+                {
+                    "id": "events.start",
+                    "category": "events",
+                    "name": "Start Event",
+                    "representations": {"unicode": "▶", "text": "[START]"}
+                },
+                {
+                    "id": "events.warning",
+                    "category": "events",
+                    "name": "Warning Event",
+                    "representations": {"unicode": "⚠", "text": "[WARN]"}
+                },
+                {
+                    "id": "events.stop",
+                    "category": "events",
+                    "name": "Stop Event",
+                    "representations": {"unicode": "■", "text": "[STOP]"}
+                },
+                {
+                    "id": "reflection.mirror",
+                    "category": "reflection",
+                    "name": "Mirror",
+                    "representations": {"unicode": "🪞", "text": "[MIRROR]"}
+                }
+            ]
+        };
+
+        // Helper function to get a glyph by ID
+        function getGlyph(glyphId) {
+            return glyphRegistry.glyphs.find(g => g.id === glyphId);
+        }
+
+        // Display glyphs by category
+        function displayCategories() {
+            const categories = [...new Set(glyphRegistry.glyphs.map(g => g.category))];
+            const container = document.getElementById('categories');
+
+            categories.forEach(category => {
+                const categoryGlyphs = glyphRegistry.glyphs.filter(g => g.category === category);
+
+                const section = document.createElement('div');
+                section.innerHTML = `
+                    <h3 style="margin-top: 1rem; margin-bottom: 0.5rem; text-transform: capitalize; color: #667eea;">
+                        ${category}
+                    </h3>
+                `;
+
+                const grid = document.createElement('div');
+                grid.className = 'glyph-grid';
+
+                categoryGlyphs.forEach(glyph => {
+                    const card = document.createElement('div');
+                    card.className = 'glyph-card';
+                    card.innerHTML = `
+                        <span class="glyph-symbol">${glyph.representations.unicode}</span>
+                        <div class="glyph-name">${glyph.name}</div>
+                        <div class="glyph-id">${glyph.id}</div>
+                    `;
+                    grid.appendChild(card);
+                });
+
+                section.appendChild(grid);
+                container.appendChild(section);
+            });
+        }
+
+        // Render status demo
+        function renderStatusDemo() {
+            const services = [
+                {name: "MirrorDNA Core", active: true, verified: true, protected: true},
+                {name: "Glyphtrail Logger", active: true, verified: true, protected: false},
+                {name: "LingOS Reflector", active: false, verified: true, protected: true},
+                {name: "Agent DNA Store", active: true, verified: false, protected: true},
+            ];
+
+            const container = document.getElementById('statusDemo');
+
+            services.forEach(service => {
+                const indicators = [];
+                if (service.active) indicators.push(getGlyph('state.active').representations.unicode);
+                if (service.verified) indicators.push(getGlyph('state.verified').representations.unicode);
+                if (service.protected) indicators.push(getGlyph('state.protected').representations.unicode);
+
+                const item = document.createElement('div');
+                item.className = 'status-item';
+                item.innerHTML = `
+                    <span>${service.name}</span>
+                    <span class="status-indicators">${indicators.join(' ')}</span>
+                `;
+                container.appendChild(item);
+            });
+        }
+
+        // Render continuity timeline
+        function renderTimeline() {
+            const sessions = [true, true, true, false, true, true]; // true = continuous
+            const container = document.getElementById('timeline');
+
+            sessions.forEach((continuous, index) => {
+                const glyph = continuous
+                    ? getGlyph('continuity.link').representations.unicode
+                    : getGlyph('events.warning').representations.unicode;
+
+                const span = document.createElement('span');
+                span.textContent = glyph;
+                span.title = continuous ? 'Continuous session' : 'Continuity break';
+                container.appendChild(span);
+            });
+        }
+
+        // Render event log
+        function renderEventLog() {
+            const events = [
+                {glyph: 'events.start', message: 'Session initiated', time: '10:00:01'},
+                {glyph: 'identity.dna', message: 'Agent DNA loaded', time: '10:00:02'},
+                {glyph: 'state.verified', message: 'Identity verified', time: '10:00:03'},
+                {glyph: 'continuity.chain', message: 'Continuity established', time: '10:00:05'},
+                {glyph: 'reflection.mirror', message: 'Reflection checkpoint', time: '10:05:30'},
+                {glyph: 'events.warning', message: 'Memory threshold warning', time: '10:15:42'},
+                {glyph: 'state.active', message: 'System stabilized', time: '10:16:01'},
+                {glyph: 'events.stop', message: 'Session ended', time: '10:30:00'},
+            ];
+
+            const container = document.getElementById('eventLog');
+
+            events.forEach(event => {
+                const entry = document.createElement('div');
+                entry.className = 'event-log-entry';
+                const glyph = getGlyph(event.glyph).representations.unicode;
+                entry.innerHTML = `
+                    <span style="color: #999;">[${event.time}]</span>
+                    ${glyph}
+                    ${event.message}
+                `;
+                container.appendChild(entry);
+            });
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            displayCategories();
+            renderStatusDemo();
+            renderTimeline();
+            renderEventLog();
+        });
+    </script>
+</body>
+</html>
