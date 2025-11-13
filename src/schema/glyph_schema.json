@@ -1,0 +1,132 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://mirrordna.org/schemas/beaconglyph.json",
+  "title": "BeaconGlyph",
+  "description": "Schema for a visual symbol in the MirrorDNA ecosystem",
+  "type": "object",
+  "required": ["id", "category", "name", "description", "representations"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier in dot notation (e.g., 'continuity.chain')",
+      "pattern": "^[a-z]+\\.[a-z_]+$"
+    },
+    "category": {
+      "type": "string",
+      "description": "Primary category of the glyph",
+      "enum": [
+        "continuity",
+        "identity",
+        "state",
+        "events",
+        "reflection",
+        "governance",
+        "navigation",
+        "data"
+      ]
+    },
+    "name": {
+      "type": "string",
+      "description": "Human-readable name of the glyph",
+      "minLength": 3,
+      "maxLength": 50
+    },
+    "description": {
+      "type": "string",
+      "description": "Semantic meaning and usage context",
+      "minLength": 10,
+      "maxLength": 200
+    },
+    "representations": {
+      "type": "object",
+      "description": "Different visual representations of the glyph",
+      "required": ["unicode", "text"],
+      "properties": {
+        "unicode": {
+          "type": "string",
+          "description": "Unicode character representation",
+          "minLength": 1,
+          "maxLength": 4
+        },
+        "text": {
+          "type": "string",
+          "description": "ASCII text fallback",
+          "minLength": 1,
+          "maxLength": 10
+        },
+        "svg": {
+          "type": "string",
+          "description": "SVG path data or inline SVG"
+        },
+        "emoji": {
+          "type": "string",
+          "description": "Emoji representation if applicable",
+          "minLength": 1,
+          "maxLength": 2
+        }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "description": "Additional metadata about the glyph",
+      "properties": {
+        "tags": {
+          "type": "array",
+          "description": "Searchable tags",
+          "items": {
+            "type": "string"
+          }
+        },
+        "useCases": {
+          "type": "array",
+          "description": "Where this glyph is typically used",
+          "items": {
+            "type": "string",
+            "enum": [
+              "glyphtrail",
+              "lingos",
+              "active_mirror_os",
+              "mirrordna_protocol",
+              "ui",
+              "logs",
+              "api"
+            ]
+          }
+        },
+        "accessibility": {
+          "type": "string",
+          "description": "Screen reader / accessibility description"
+        },
+        "relatedGlyphs": {
+          "type": "array",
+          "description": "IDs of semantically related glyphs",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "variants": {
+      "type": "object",
+      "description": "Alternative versions of the glyph",
+      "properties": {
+        "active": {
+          "type": "string",
+          "description": "Active/highlighted state representation"
+        },
+        "inactive": {
+          "type": "string",
+          "description": "Inactive/dimmed state representation"
+        },
+        "error": {
+          "type": "string",
+          "description": "Error state representation"
+        },
+        "success": {
+          "type": "string",
+          "description": "Success state representation"
+        }
+      }
+    }
+  }
+}
