@@ -4,7 +4,7 @@ Complete reference of all glyphs in the BeaconGlyphs registry.
 
 **Registry Version:** 1.0.0
 **Last Updated:** 2025-11-13
-**Total Glyphs:** 26
+**Total Glyphs:** 25
 
 ---
 
