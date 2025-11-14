@@ -1,9 +1,30 @@
+# BeaconGlyphs .gitignore
+
+# ============================================
+# Dependencies
+# ============================================
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# ============================================
 # Python
+# ============================================
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
 .Python
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
+virtualenv/
+
+# Distribution / packaging
 build/
 develop-eggs/
 dist/
@@ -21,37 +42,110 @@ wheels/
 *.egg
 MANIFEST
 
-# Virtual environments
-venv/
-ENV/
-env/
-.venv
-
 # Testing
 .pytest_cache/
 .coverage
 htmlcov/
 .tox/
+.nox/
+coverage.xml
+*.cover
+.hypothesis/
 
-# IDEs
+# ============================================
+# TypeScript / JavaScript
+# ============================================
+# Compiled output
+*.js.map
+*.d.ts.map
+dist/
+out/
+packages/*/dist/
+packages/*/build/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# ============================================
+# IDE / Editors
+# ============================================
 .vscode/
+!.vscode/extensions.json
+!.vscode/settings.json
 .idea/
 *.swp
 *.swo
 *~
-.DS_Store
+*.sublime-project
+*.sublime-workspace
+.project
+.classpath
+.settings/
 
+# ============================================
 # OS
-Thumbs.db
+# ============================================
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# ============================================
+# Logs
+# ============================================
 *.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
 
-# Node (for web examples)
-node_modules/
-package-lock.json
-yarn.lock
+# ============================================
+# Build artifacts
+# ============================================
+*.min.js
+*.min.css
+*.bundle.js
+*.chunk.js
 
-# Misc
-*.bak
+# ============================================
+# Temporary files
+# ============================================
 *.tmp
+*.temp
+*.bak
+*.swp
 .cache/
+.temp/
+
+# ============================================
+# Environment
+# ============================================
+.env
+.env.local
+.env.*.local
+.env.development
+.env.test
+.env.production
+
+# ============================================
+# Documentation build artifacts
+# ============================================
+docs-api/
+.docusaurus/
+_site/
+
+# ============================================
+# Misc
+# ============================================
+.npmrc
+.yarnrc
+.pnp.*
+.yarn/
+
+# Keep empty directories
+!.gitkeep
