@@ -82,8 +82,9 @@ BeaconGlyphs/
 ├── docs/               # Documentation
 ├── examples/           # Usage examples
 │   └── web-demo/       # Interactive showcase
-├── tests/              # Test suites
-└── tooling/            # Validation scripts
+├── registry/           # Glyph registry and schema
+├── scripts/            # Validation and build scripts
+└── tests/              # Test suites
 ```
 
 ---
@@ -198,7 +199,7 @@ npm test
 
 ### Validate Registry
 ```bash
-python tooling/validate_registry.py
+python scripts/validate_registry.py
 ```
 
 ---

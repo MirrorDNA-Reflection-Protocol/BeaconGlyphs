@@ -2,23 +2,23 @@
   "name": "beaconglyphs",
   "version": "1.0.0",
   "description": "Visual and symbolic language system for the MirrorDNA ecosystem",
-  "main": "components/react/index.js",
-  "types": "components/react/index.d.ts",
+  "main": "packages/react/src/index.js",
+  "types": "packages/react/src/index.d.ts",
   "files": [
     "assets/",
-    "components/",
-    "src/",
+    "packages/",
+    "registry/",
     "docs/",
     "README.md",
     "LICENSE"
   ],
   "scripts": {
-    "validate": "python tooling/validate_registry.py",
+    "validate": "python scripts/validate_registry.py",
     "test": "pytest tests/",
     "build": "tsc",
-    "lint": "eslint components/react --ext .ts,.tsx",
-    "format": "prettier --write \"components/**/*.{ts,tsx,css}\"",
-    "docs": "typedoc --out docs-api components/react"
+    "lint": "eslint packages/react --ext .ts,.tsx",
+    "format": "prettier --write \"packages/**/*.{ts,tsx,css}\"",
+    "docs": "typedoc --out docs-api packages/react"
   },
   "keywords": [
     "beaconglyphs",
@@ -56,17 +56,18 @@
   },
   "exports": {
     ".": {
-      "import": "./components/react/index.js",
-      "require": "./components/react/index.js",
-      "types": "./components/react/index.d.ts"
+      "import": "./packages/react/src/index.js",
+      "require": "./packages/react/src/index.js",
+      "types": "./packages/react/src/index.d.ts"
     },
     "./react": {
-      "import": "./components/react/index.js",
-      "require": "./components/react/index.js",
-      "types": "./components/react/index.d.ts"
+      "import": "./packages/react/src/index.js",
+      "require": "./packages/react/src/index.js",
+      "types": "./packages/react/src/index.d.ts"
     },
-    "./css": "./components/css/beaconglyphs.css",
-    "./registry": "./src/glyphs/registry.json",
-    "./schema": "./src/schema/glyph_schema.json"
+    "./css": "./packages/css/beacon-glyphs.css",
+    "./tokens": "./packages/css/tokens.css",
+    "./registry": "./registry/glyphs.json",
+    "./schema": "./registry/schema.json"
   }
 }

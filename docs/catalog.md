@@ -388,8 +388,8 @@ Data:        💾 〰️
 If you need to represent a concept that doesn't have a glyph:
 
 1. **Check combinations** - Can you express it with existing glyphs?
-2. **Propose a new glyph** - Follow the schema in `src/schema/glyph_schema.json`
-3. **Validate** - Use `tooling/validate_registry.py`
+2. **Propose a new glyph** - Follow the schema in `registry/schema/glyph_schema.json`
+3. **Validate** - Use `scripts/validate_registry.py`
 4. **Submit** - Create a PR to add it to the registry
 
 ---

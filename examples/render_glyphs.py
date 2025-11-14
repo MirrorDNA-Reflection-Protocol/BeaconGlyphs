@@ -260,7 +260,7 @@ def main():
     demo_search()
 
     print("=" * 60)
-    print("Demo complete! Check the registry at src/glyphs/registry.json")
+    print("Demo complete! Check the registry at registry/glyphs/registry.json")
     print("=" * 60)
 
 

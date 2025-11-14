@@ -33,7 +33,7 @@ BeaconGlyphs is structured as a **schema-first, data-driven symbol system**. Thi
 
 ## Schema Design
 
-The JSON schema (`src/schema/glyph_schema.json`) defines the structure of a valid BeaconGlyph.
+The JSON schema (`registry/schema/glyph_schema.json`) defines the structure of a valid BeaconGlyph.
 
 ### Core Fields
 
@@ -65,7 +65,7 @@ Glyphs can include:
 
 ## Registry Format
 
-The registry (`src/glyphs/registry.json`) is a versioned collection of all defined glyphs.
+The registry (`registry/glyphs/registry.json`) is a versioned collection of all defined glyphs.
 
 ### Top-Level Structure
 
@@ -199,7 +199,7 @@ Scalable vector graphics path or inline SVG.
 All glyphs in the registry must validate against the schema:
 
 ```bash
-python tooling/validate_registry.py
+python scripts/validate_registry.py
 ```
 
 This checks:

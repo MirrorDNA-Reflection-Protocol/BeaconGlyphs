@@ -53,7 +53,7 @@ Before proposing a new glyph, consider:
 
 ### Step 2: Create the Glyph Definition
 
-Add your glyph to `src/glyphs/registry.json`:
+Add your glyph to `registry/glyphs/registry.json`:
 
 ```json
 {
@@ -124,7 +124,7 @@ Create your SVG in `assets/svg/[category-name].svg`:
 Run the validation script:
 
 ```bash
-python tooling/validate_registry.py
+python scripts/validate_registry.py
 ```
 
 This checks:
@@ -170,7 +170,7 @@ Why this glyph is needed across the MirrorDNA ecosystem.
 
 ## Checklist
 - [ ] SVG file created in `assets/svg/`
-- [ ] Registry entry added to `src/glyphs/registry.json`
+- [ ] Registry entry added to `registry/glyphs/registry.json`
 - [ ] Documentation updated in `docs/glyph_catalog.md`
 - [ ] Validation script passes
 - [ ] Tested at multiple sizes (16px-64px)
@@ -186,7 +186,7 @@ Why this glyph is needed across the MirrorDNA ecosystem.
 
 For small fixes:
 1. Make the change
-2. Run validation: `python tooling/validate_registry.py`
+2. Run validation: `python scripts/validate_registry.py`
 3. Submit PR with clear description
 4. Increment patch version if needed (1.0.0 → 1.0.1)
 

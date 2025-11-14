@@ -37,9 +37,9 @@ Publish packages to npm registry for easy installation:
 
 Clean up duplicate folders and consolidate documentation:
 - Remove duplicate `components/` folder (keep `packages/`)
-- Rename `src/` to `registry/` for clarity
+- Rename `registry/` to `registry/` for clarity
 - Consolidate duplicate documentation files
-- Move `web-demo/` to `examples/web-demo/`
+- Move `examples/web-demo/` to `examples/examples/web-demo/`
 
 **Benefits:**
 - Clear, intuitive folder structure

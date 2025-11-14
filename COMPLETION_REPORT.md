@@ -36,7 +36,7 @@ BeaconGlyphs/
 │       ├── generic_beacon.svg
 │       └── [25 symbolic glyphs]
 │
-├── web-demo/                   # Interactive showcase
+├── examples/web-demo/                   # Interactive showcase
 │   ├── index.html             # Demo page
 │   ├── styles.css             # Responsive styling
 │   └── app.js                 # Dynamic glyph rendering

@@ -12,7 +12,7 @@ BeaconGlyphs is a reference repository. You can use it in several ways:
 git clone https://github.com/MirrorDNA-Reflection-Protocol/BeaconGlyphs.git
 
 # Use the registry directly
-cat BeaconGlyphs/src/glyphs/registry.json
+cat BeaconGlyphs/registry/glyphs/registry.json
 ```
 
 **2. As a Git Submodule**
@@ -22,14 +22,14 @@ git submodule add https://github.com/MirrorDNA-Reflection-Protocol/BeaconGlyphs.
 
 # Access glyphs in your code
 import json
-with open('BeaconGlyphs/src/glyphs/registry.json') as f:
+with open('BeaconGlyphs/registry/glyphs/registry.json') as f:
     glyphs = json.load(f)
 ```
 
 **3. Copy What You Need**
 ```bash
 # Just copy the registry
-cp BeaconGlyphs/src/glyphs/registry.json ./glyphs.json
+cp BeaconGlyphs/registry/glyphs/registry.json ./glyphs.json
 ```
 
 ### Basic Usage
@@ -40,7 +40,7 @@ cp BeaconGlyphs/src/glyphs/registry.json ./glyphs.json
 import json
 
 # Load the registry
-with open('src/glyphs/registry.json', 'r') as f:
+with open('registry/glyphs/registry.json', 'r') as f:
     registry = json.load(f)
 
 # Helper function to get a glyph
@@ -68,7 +68,7 @@ const fs = require('fs');
 
 // Load the registry
 const registry = JSON.parse(
-  fs.readFileSync('src/glyphs/registry.json', 'utf8')
+  fs.readFileSync('registry/glyphs/registry.json', 'utf8')
 );
 
 // Helper function
@@ -95,14 +95,14 @@ const verified = glyphIndex['state.verified'];
 
 ```bash
 # Extract all glyphs in a category
-jq '.glyphs[] | select(.category == "continuity")' src/glyphs/registry.json
+jq '.glyphs[] | select(.category == "continuity")' registry/glyphs/registry.json
 
 # Get just the unicode representation
 jq -r '.glyphs[] | select(.id == "continuity.chain") | .representations.unicode' \
-  src/glyphs/registry.json
+  registry/glyphs/registry.json
 
 # List all glyph IDs
-jq -r '.glyphs[].id' src/glyphs/registry.json
+jq -r '.glyphs[].id' registry/glyphs/registry.json
 ```
 
 ## Common Patterns
@@ -337,7 +337,7 @@ class BeaconGlyphLibrary:
         ]
 
 # Usage:
-glyphs = BeaconGlyphLibrary('src/glyphs/registry.json')
+glyphs = BeaconGlyphLibrary('registry/glyphs/registry.json')
 print(glyphs.get('continuity.chain'))  # ⛓️
 print(glyphs.get('continuity.chain', 'text'))  # [CHAIN]
 

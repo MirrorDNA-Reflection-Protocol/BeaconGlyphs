@@ -101,7 +101,7 @@ If you want to add a new example:
 ```python
 import json
 
-with open('src/glyphs/registry.json') as f:
+with open('registry/glyphs/registry.json') as f:
     registry = json.load(f)
 
 def get_glyph(glyph_id):

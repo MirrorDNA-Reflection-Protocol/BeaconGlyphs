@@ -7,6 +7,10 @@
 export { BeaconGlyph } from './BeaconGlyph';
 export type { BeaconGlyphProps, GlyphSize, GlyphVariant } from './BeaconGlyph';
 
+export { GlyphBadge } from './GlyphBadge';
+export { GlyphGroup } from './GlyphGroup';
+export { GlyphStatus } from './GlyphStatus';
+
 export { GLYPHS, BRAND_GLYPHS, SYMBOLIC_GLYPHS, getGlyph, getGlyphsByCategory } from './glyphs';
 export type { GlyphDefinition } from './glyphs';
 
