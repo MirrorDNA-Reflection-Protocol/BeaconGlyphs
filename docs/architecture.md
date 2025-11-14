@@ -1,5 +1,23 @@
 # BeaconGlyphs Architecture
 
+## At a Glance
+
+BeaconGlyphs uses a **schema-first, data-driven architecture**:
+
+1. **Schema** (`src/schema/glyph_schema.json`) defines what makes a valid glyph
+2. **Registry** (`src/glyphs/registry.json`) contains all defined glyphs with metadata
+3. **Applications** consume the registry and validate against the schema
+4. **Tooling** ensures consistency and correctness
+
+**Key Design Decisions:**
+- JSON-based for universal compatibility
+- Versioned registry (semantic versioning)
+- Multiple representations (Unicode, emoji, SVG, text)
+- Category-based organization (8 core categories)
+- Extensible metadata for searchability
+
+---
+
 ## System Structure
 
 BeaconGlyphs is structured as a **schema-first, data-driven symbol system**. This means:

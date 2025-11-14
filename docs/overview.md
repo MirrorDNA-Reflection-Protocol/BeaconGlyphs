@@ -1,5 +1,17 @@
 # BeaconGlyphs Overview
 
+## At a Glance
+
+BeaconGlyphs is a **schema-driven visual language** for the MirrorDNA ecosystem. It provides 32 production-ready glyphs that represent abstract concepts like continuity, identity, and reflection with concrete, recognizable symbols. Every glyph works across terminals, UIs, and documentation, with multiple representations (Unicode, emoji, SVG, text fallback).
+
+**Key Points:**
+- 32 glyphs across 8 semantic categories
+- Universal compatibility (SVG, Unicode, emoji, text)
+- Accessibility-first design (WCAG 2.1 Level AA)
+- Used consistently across Glyphtrail, LingOS, Active MirrorOS, and MirrorDNA Protocol
+
+---
+
 ## Philosophy
 
 BeaconGlyphs exists to make the invisible visible. In systems that deal with continuity, identity, and reflection—like Active MirrorOS and MirrorDNA—abstract concepts need concrete visual representation. BeaconGlyphs provides that bridge.

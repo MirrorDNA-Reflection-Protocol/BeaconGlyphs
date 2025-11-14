@@ -4,6 +4,20 @@ Complete guide to integrating BeaconGlyphs into your applications, websites, and
 
 ---
 
+## At a Glance
+
+**Quick Integration Options:**
+- **React/TypeScript:** `npm install @beaconglyphs/react` (future)
+- **Direct SVG:** Copy from `assets/svg/` directory
+- **CSS Utilities:** Import `packages/css/beacon-glyphs.css`
+- **Git Submodule:** Full repository access
+
+**Supported Frameworks:** React, Vue, Angular, Svelte, vanilla HTML/CSS
+
+**What You Get:** Type-safe components, CSS utilities with design tokens, optimized SVGs, dark mode support
+
+---
+
 ## Installation Methods
 
 ### 1. NPM Package (Recommended)

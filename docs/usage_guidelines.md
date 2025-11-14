@@ -4,6 +4,19 @@ Sizing, spacing, color, and visual consistency rules for BeaconGlyphs.
 
 ---
 
+## At a Glance
+
+**Quick Rules:**
+- **Standard sizes:** xs(16px), sm(24px), md(32px), lg(48px), xl(64px), 2xl(80px)
+- **Default spacing:** 8px gap between glyph and text
+- **Contrast ratio:** ≥4.5:1 for WCAG AA compliance
+- **Minimum touch target:** 44×44px for interactive glyphs
+- **Never:** Distort aspect ratios, use below 16px, place on busy backgrounds
+
+**Remember:** Maintain square proportions, provide alt text, test in light and dark modes.
+
+---
+
 ## Sizing
 
 ### Standard Sizes

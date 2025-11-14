@@ -2,6 +2,17 @@
 
 This directory contains practical, working examples demonstrating how to use BeaconGlyphs in different contexts.
 
+## At a Glance
+
+**Quick Start:**
+- **Python users:** Run `python examples/render_glyphs.py`
+- **Web developers:** Open `web_display.html` in your browser
+- **Glyphtrail integration:** Check `glyphtrail_integration/` directory
+
+All examples show real-world usage patterns, not toy demos.
+
+---
+
 ## Available Examples
 
 ### 1. Python Usage (`render_glyphs.py`)
@@ -144,7 +155,8 @@ def find_by_tag(tag):
 
 - See main README: `../README.md`
 - Check usage guide: `../docs/usage.md`
-- Browse catalog: `../docs/catalog.md`
+- Browse catalog: `../docs/glyph_catalog.md`
+- View all docs: `../docs/README.md`
 
 ---
 

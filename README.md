@@ -6,12 +6,52 @@ BeaconGlyphs provides 32 production-ready SVG glyphs that represent brands, stat
 
 ---
 
+## Part of the MirrorDNA Constellation
+
+BeaconGlyphs is the **symbolic layer** of the MirrorDNA ecosystem, providing the visual vocabulary for:
+
+- **MirrorDNA-Standard** - Core continuity protocol and specifications
+- **Glyphtrail** - Interaction logging and lineage visualization (uses these symbols)
+- **LingOS** - Language-native reflective dialogue system (displays state with these glyphs)
+- **Active MirrorOS** - Intelligence that remembers (UI powered by these symbols)
+- **TrustByDesign** - Safety and governance framework (compliance indicators)
+- **AgentDNA** - Agent personality and persistence schemas (identity markers)
+
+---
+
+## Who Is This For?
+
+BeaconGlyphs is designed for:
+
+- **Product developers** building on the MirrorDNA ecosystem who need consistent visual symbols
+- **UI/UX designers** creating interfaces for continuity-aware applications
+- **Documentation writers** looking to represent abstract concepts visually
+- **Integration partners** who want to indicate MirrorDNA compatibility
+- **Open source contributors** extending the MirrorDNA constellation
+
+---
+
+## Where to Start
+
+**New to BeaconGlyphs?**
+1. Browse the [Glyph Catalog](docs/glyph_catalog.md) to see all available symbols
+2. Read [Overview](docs/overview.md) to understand the philosophy
+3. Try the [Interactive Demo](#view-the-interactive-demo) below
+4. Follow the [Integration Guide](docs/integration_guide.md) for your framework
+
+**Ready to use?**
+- Jump to [Quick Start](#quick-start) for immediate usage
+- See [Usage Guidelines](docs/usage_guidelines.md) for sizing and styling rules
+- Check [Examples](examples/README.md) for real-world patterns
+
+---
+
 ## Quick Start
 
 ### View the Interactive Demo
 
 ```bash
-cd examples/web-demo
+cd web-demo
 open index.html  # macOS / xdg-open on Linux / start on Windows
 ```
 
