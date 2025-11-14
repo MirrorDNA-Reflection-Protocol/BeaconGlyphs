@@ -1,0 +1,22 @@
+<!-- Generic Beacon Glyph -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <title>Generic Beacon</title>
+  <desc>Generic beacon marker for events and states</desc>
+
+  <!-- Beacon radiating signal -->
+  <g fill="none" stroke="currentColor" stroke-width="2">
+    <!-- Center beacon -->
+    <circle cx="24" cy="24" r="4" fill="currentColor"/>
+
+    <!-- Radiating waves -->
+    <circle cx="24" cy="24" r="10" opacity="0.6"/>
+    <circle cx="24" cy="24" r="16" opacity="0.3"/>
+    <circle cx="24" cy="24" r="22" opacity="0.1"/>
+  </g>
+
+  <!-- Pulse animation -->
+  <circle cx="24" cy="24" r="8" fill="none" stroke="currentColor" stroke-width="1" opacity="0.5">
+    <animate attributeName="r" values="4;16;4" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.5;0;0.5" dur="2s" repeatCount="indefinite"/>
+  </circle>
+</svg>

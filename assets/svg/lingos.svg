@@ -1,0 +1,21 @@
+<!-- LingOS Brand Glyph -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <title>LingOS</title>
+  <desc>Language-native operating system for reflective dialogue</desc>
+
+  <!-- Speech bubble with reflection -->
+  <g fill="none" stroke="currentColor" stroke-width="2">
+    <!-- Main bubble -->
+    <path d="M8 8 h28 a4 4 0 0 1 4 4 v16 a4 4 0 0 1 -4 4 h-8 l-6 8 l-2 -8 h-12 a4 4 0 0 1 -4 -4 v-16 a4 4 0 0 1 4 -4 z"/>
+
+    <!-- Reflection line -->
+    <line x1="14" y1="16" x2="34" y2="16" stroke-dasharray="2,2"/>
+
+    <!-- Text lines representing language -->
+    <line x1="14" y1="20" x2="28" y2="20"/>
+    <line x1="14" y1="24" x2="34" y2="24"/>
+  </g>
+
+  <!-- Recursive symbol -->
+  <circle cx="24" cy="12" r="1.5" fill="currentColor"/>
+</svg>

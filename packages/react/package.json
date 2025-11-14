@@ -1,0 +1,35 @@
+{
+  "name": "@beaconglyphs/react",
+  "version": "1.0.0",
+  "description": "React components for BeaconGlyphs - visual language for MirrorDNA ecosystem",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "lint": "eslint src --ext .ts,.tsx"
+  },
+  "keywords": [
+    "beaconglyphs",
+    "mirrordna",
+    "react",
+    "icons",
+    "glyphs"
+  ],
+  "author": "N1 Intelligence Inc.",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "typescript": "^5.0.0"
+  }
+}

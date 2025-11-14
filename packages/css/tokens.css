@@ -1,0 +1,105 @@
+/**
+ * BeaconGlyphs CSS Tokens
+ * Design tokens for consistent sizing, spacing, and theming
+ */
+
+:root {
+  /* Sizing */
+  --beacon-glyph-size-xs: 1rem;      /* 16px */
+  --beacon-glyph-size-sm: 1.5rem;    /* 24px */
+  --beacon-glyph-size-md: 2rem;      /* 32px */
+  --beacon-glyph-size-lg: 3rem;      /* 48px */
+  --beacon-glyph-size-xl: 4rem;      /* 64px */
+  --beacon-glyph-size-2xl: 5rem;     /* 80px */
+
+  /* Spacing */
+  --beacon-glyph-gap-sm: 0.25rem;    /* 4px */
+  --beacon-glyph-gap-md: 0.5rem;     /* 8px */
+  --beacon-glyph-gap-lg: 0.75rem;    /* 12px */
+  --beacon-glyph-gap-xl: 1rem;       /* 16px */
+
+  /* Colors - Light Mode */
+  --beacon-color-primary: #667eea;
+  --beacon-color-secondary: #764ba2;
+  --beacon-color-success: #10b981;
+  --beacon-color-warning: #f59e0b;
+  --beacon-color-error: #ef4444;
+  --beacon-color-info: #3b82f6;
+  --beacon-color-muted: #9ca3af;
+
+  /* Background colors */
+  --beacon-bg-primary: #f9fafb;
+  --beacon-bg-secondary: #f3f4f6;
+  --beacon-border-color: #e5e7eb;
+
+  /* Text colors */
+  --beacon-text-primary: #111827;
+  --beacon-text-secondary: #6b7280;
+
+  /* Shadows */
+  --beacon-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --beacon-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --beacon-shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+
+  /* Transitions */
+  --beacon-transition-fast: 150ms;
+  --beacon-transition-normal: 300ms;
+  --beacon-transition-slow: 500ms;
+
+  /* Border radius */
+  --beacon-radius-sm: 4px;
+  --beacon-radius-md: 6px;
+  --beacon-radius-lg: 8px;
+  --beacon-radius-full: 9999px;
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Colors - Dark Mode */
+    --beacon-color-primary: #818cf8;
+    --beacon-color-secondary: #a78bfa;
+    --beacon-color-success: #34d399;
+    --beacon-color-warning: #fbbf24;
+    --beacon-color-error: #f87171;
+    --beacon-color-info: #60a5fa;
+    --beacon-color-muted: #6b7280;
+
+    /* Background colors */
+    --beacon-bg-primary: #111827;
+    --beacon-bg-secondary: #1f2937;
+    --beacon-border-color: #374151;
+
+    /* Text colors */
+    --beacon-text-primary: #f9fafb;
+    --beacon-text-secondary: #9ca3af;
+  }
+}
+
+/* Manual dark mode class */
+.dark {
+  --beacon-color-primary: #818cf8;
+  --beacon-color-secondary: #a78bfa;
+  --beacon-color-success: #34d399;
+  --beacon-color-warning: #fbbf24;
+  --beacon-color-error: #f87171;
+  --beacon-color-info: #60a5fa;
+  --beacon-color-muted: #6b7280;
+  --beacon-bg-primary: #111827;
+  --beacon-bg-secondary: #1f2937;
+  --beacon-border-color: #374151;
+  --beacon-text-primary: #f9fafb;
+  --beacon-text-secondary: #9ca3af;
+}
+
+/* Category-specific color tokens (optional) */
+:root {
+  --beacon-continuity-color: var(--beacon-color-primary);
+  --beacon-identity-color: #8b5cf6;
+  --beacon-state-color: var(--beacon-color-success);
+  --beacon-events-color: var(--beacon-color-warning);
+  --beacon-reflection-color: #6366f1;
+  --beacon-governance-color: #8b5cf6;
+  --beacon-navigation-color: var(--beacon-color-info);
+  --beacon-data-color: #06b6d4;
+}
