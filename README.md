@@ -4,6 +4,9 @@
 
 BeaconGlyphs provides 32 production-ready SVG glyphs that represent brands, states, events, and interactions across the MirrorDNA ecosystem. This repository is the canonical source for all visual symbols used in Glyphtrail, LingOS, Active MirrorOS, and other MirrorDNA products.
 
+**Continuity Link:**
+BeaconGlyphs v1.x is governed by **Master Citation v15.2**, ensuring symbolic consistency across all MirrorDNA visual systems.
+
 ---
 
 ## Quick Start
