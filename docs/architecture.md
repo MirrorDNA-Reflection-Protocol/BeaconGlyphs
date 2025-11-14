@@ -273,7 +273,7 @@ def find_by_tag(tag):
 
 ### Registry Size
 
-The current registry contains ~26 glyphs. Expected to grow to ~100-200 glyphs as the ecosystem matures.
+The current registry contains 25 glyphs. Expected to grow to ~100-200 glyphs as the ecosystem matures.
 
 **File size:** ~20-40 KB for the full registry
 **Parse time:** < 1ms on modern hardware

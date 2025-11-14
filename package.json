@@ -1,0 +1,72 @@
+{
+  "name": "beaconglyphs",
+  "version": "1.0.0",
+  "description": "Visual and symbolic language system for the MirrorDNA ecosystem",
+  "main": "components/react/index.js",
+  "types": "components/react/index.d.ts",
+  "files": [
+    "assets/",
+    "components/",
+    "src/",
+    "docs/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "validate": "python tooling/validate_registry.py",
+    "test": "pytest tests/",
+    "build": "tsc",
+    "lint": "eslint components/react --ext .ts,.tsx",
+    "format": "prettier --write \"components/**/*.{ts,tsx,css}\"",
+    "docs": "typedoc --out docs-api components/react"
+  },
+  "keywords": [
+    "beaconglyphs",
+    "mirrordna",
+    "glyphs",
+    "icons",
+    "symbols",
+    "continuity",
+    "identity",
+    "design-system",
+    "react",
+    "typescript"
+  ],
+  "author": "MirrorDNA-Reflection-Protocol",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MirrorDNA-Reflection-Protocol/BeaconGlyphs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MirrorDNA-Reflection-Protocol/BeaconGlyphs/issues"
+  },
+  "homepage": "https://github.com/MirrorDNA-Reflection-Protocol/BeaconGlyphs#readme",
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "typescript": "^5.0.0",
+    "eslint": "^8.0.0",
+    "prettier": "^3.0.0",
+    "typedoc": "^0.25.0"
+  },
+  "exports": {
+    ".": {
+      "import": "./components/react/index.js",
+      "require": "./components/react/index.js",
+      "types": "./components/react/index.d.ts"
+    },
+    "./react": {
+      "import": "./components/react/index.js",
+      "require": "./components/react/index.js",
+      "types": "./components/react/index.d.ts"
+    },
+    "./css": "./components/css/beaconglyphs.css",
+    "./registry": "./src/glyphs/registry.json",
+    "./schema": "./src/schema/glyph_schema.json"
+  }
+}

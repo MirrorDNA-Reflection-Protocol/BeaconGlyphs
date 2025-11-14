@@ -1,0 +1,25 @@
+<!-- Active MirrorOS Brand Glyph -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <title>Active MirrorOS</title>
+  <desc>Intelligence that remembers - the product layer</desc>
+
+  <!-- Mirror symbol -->
+  <g fill="none" stroke="currentColor" stroke-width="2">
+    <!-- Mirror frame -->
+    <ellipse cx="24" cy="24" rx="16" ry="20"/>
+
+    <!-- Mirror center line -->
+    <line x1="24" y1="4" x2="24" y2="44"/>
+
+    <!-- Reflection curves -->
+    <path d="M16 12 Q20 10, 24 12" opacity="0.5"/>
+    <path d="M24 12 Q28 10, 32 12" opacity="0.5"/>
+    <path d="M16 36 Q20 38, 24 36" opacity="0.5"/>
+    <path d="M24 36 Q28 38, 32 36" opacity="0.5"/>
+  </g>
+
+  <!-- Active pulse indicator -->
+  <circle cx="24" cy="24" r="4" fill="currentColor" opacity="0.3">
+    <animate attributeName="opacity" values="0.3;0.8;0.3" dur="2s" repeatCount="indefinite"/>
+  </circle>
+</svg>

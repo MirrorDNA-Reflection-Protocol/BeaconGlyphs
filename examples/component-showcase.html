@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeaconGlyphs Component Showcase</title>
+    <link rel="stylesheet" href="../components/css/beaconglyphs.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background: #f9fafb;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: #111827;
+        }
+
+        .subtitle {
+            color: #6b7280;
+            margin-bottom: 3rem;
+            font-size: 1.125rem;
+        }
+
+        .section {
+            background: white;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: #111827;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 0.5rem;
+        }
+
+        .showcase-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .showcase-item {
+            padding: 1rem;
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+            text-align: center;
+            transition: all 0.2s;
+        }
+
+        .showcase-item:hover {
+            border-color: #667eea;
+            box-shadow: 0 4px 6px rgba(102, 126, 234, 0.1);
+        }
+
+        .showcase-item .glyph-display {
+            margin: 1rem 0;
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .showcase-item .label {
+            font-weight: 500;
+            color: #374151;
+        }
+
+        .showcase-item .description {
+            font-size: 0.875rem;
+            color: #6b7280;
+            margin-top: 0.5rem;
+        }
+
+        .size-demo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: #f9fafb;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+        }
+
+        .color-demo {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            padding: 1rem;
+            background: #f9fafb;
+            border-radius: 6px;
+        }
+
+        .animation-demo {
+            display: flex;
+            gap: 2rem;
+            padding: 2rem;
+            background: #f9fafb;
+            border-radius: 6px;
+            justify-content: center;
+        }
+
+        .badge-demo, .status-demo {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            padding: 1rem;
+        }
+
+        code {
+            background: #f3f4f6;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.875rem;
+        }
+
+        .code-block {
+            background: #1f2937;
+            color: #f9fafb;
+            padding: 1rem;
+            border-radius: 6px;
+            overflow-x: auto;
+            margin-top: 1rem;
+        }
+
+        .code-block code {
+            background: transparent;
+            color: inherit;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 2px solid #e5e7eb;
+            color: #6b7280;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧬 BeaconGlyphs Component Showcase</h1>
+        <p class="subtitle">Production-ready visual components for the MirrorDNA ecosystem</p>
+
+        <!-- All Glyphs Gallery -->
+        <div class="section">
+            <h2>Complete Glyph Collection (25 Glyphs)</h2>
+            <div class="showcase-grid" id="glyphGallery"></div>
+        </div>
+
+        <!-- Size Variants -->
+        <div class="section">
+            <h2>Size Variants</h2>
+            <div class="size-demo">
+                <span class="bg-glyph bg-identity-dna bg-size-xs"></span>
+                <code>xs</code>
+                <span class="bg-glyph bg-identity-dna bg-size-sm"></span>
+                <code>sm</code>
+                <span class="bg-glyph bg-identity-dna bg-size-md"></span>
+                <code>md</code>
+                <span class="bg-glyph bg-identity-dna bg-size-lg"></span>
+                <code>lg</code>
+                <span class="bg-glyph bg-identity-dna bg-size-xl"></span>
+                <code>xl</code>
+                <span class="bg-glyph bg-identity-dna bg-size-2xl"></span>
+                <code>2xl</code>
+            </div>
+        </div>
+
+        <!-- Color Themes -->
+        <div class="section">
+            <h2>Color Themes</h2>
+            <div class="color-demo">
+                <span class="bg-glyph bg-state-verified bg-size-xl"></span>
+                <span class="bg-glyph bg-state-verified bg-size-xl bg-color-primary"></span>
+                <span class="bg-glyph bg-state-verified bg-size-xl bg-color-success"></span>
+                <span class="bg-glyph bg-state-verified bg-size-xl bg-color-warning"></span>
+                <span class="bg-glyph bg-state-verified bg-size-xl bg-color-error"></span>
+                <span class="bg-glyph bg-state-verified bg-size-xl bg-color-info"></span>
+                <span class="bg-glyph bg-state-verified bg-size-xl bg-color-muted"></span>
+            </div>
+            <p style="margin-top: 1rem; color: #6b7280;">
+                <code>default</code>, <code>primary</code>, <code>success</code>, <code>warning</code>, <code>error</code>, <code>info</code>, <code>muted</code>
+            </p>
+        </div>
+
+        <!-- Animations -->
+        <div class="section">
+            <h2>Animations</h2>
+            <div class="animation-demo">
+                <div style="text-align: center;">
+                    <span class="bg-glyph bg-state-active bg-size-2xl bg-animate-pulse"></span>
+                    <p style="margin-top: 0.5rem;"><code>pulse</code></p>
+                </div>
+                <div style="text-align: center;">
+                    <span class="bg-glyph bg-events-cycle bg-size-2xl bg-animate-spin"></span>
+                    <p style="margin-top: 0.5rem;"><code>spin</code></p>
+                </div>
+                <div style="text-align: center;">
+                    <span class="bg-glyph bg-events-flag bg-size-2xl bg-animate-bounce"></span>
+                    <p style="margin-top: 0.5rem;"><code>bounce</code></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Badges -->
+        <div class="section">
+            <h2>Badges</h2>
+            <div class="badge-demo">
+                <span class="bg-badge">
+                    <span class="bg-glyph bg-identity-dna bg-size-sm"></span>
+                    <span>Agent DNA</span>
+                </span>
+                <span class="bg-badge bg-badge-primary">
+                    <span class="bg-glyph bg-continuity-chain bg-size-sm"></span>
+                    <span>Continuous</span>
+                </span>
+                <span class="bg-badge bg-badge-success">
+                    <span class="bg-glyph bg-state-verified bg-size-sm"></span>
+                    <span>Verified</span>
+                </span>
+                <span class="bg-badge bg-badge-warning">
+                    <span class="bg-glyph bg-events-warning bg-size-sm"></span>
+                    <span>Warning</span>
+                </span>
+                <span class="bg-badge bg-badge-error">
+                    <span class="bg-glyph bg-continuity-broken bg-size-sm"></span>
+                    <span>Disconnected</span>
+                </span>
+            </div>
+            <div class="code-block">
+                <code>&lt;span class="bg-badge bg-badge-success"&gt;
+  &lt;span class="bg-glyph bg-state-verified bg-size-sm"&gt;&lt;/span&gt;
+  &lt;span&gt;Verified&lt;/span&gt;
+&lt;/span&gt;</code>
+            </div>
+        </div>
+
+        <!-- Status Indicators -->
+        <div class="section">
+            <h2>Status Indicators</h2>
+            <div class="status-demo" style="flex-direction: column;">
+                <div class="bg-status">
+                    <span class="bg-glyph bg-state-active bg-size-md"></span>
+                    <span>System Active</span>
+                    <span class="bg-status-dot bg-status-dot-success"></span>
+                </div>
+                <div class="bg-status">
+                    <span class="bg-glyph bg-data-memory bg-size-md"></span>
+                    <span>Memory: 3.2 GB</span>
+                    <span class="bg-status-dot bg-status-dot-info"></span>
+                </div>
+                <div class="bg-status">
+                    <span class="bg-glyph bg-events-warning bg-size-md"></span>
+                    <span>Low Storage</span>
+                    <span class="bg-status-dot bg-status-dot-warning"></span>
+                </div>
+                <div class="bg-status">
+                    <span class="bg-glyph bg-continuity-broken bg-size-md"></span>
+                    <span>Connection Lost</span>
+                    <span class="bg-status-dot bg-status-dot-error"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Glyph Groups -->
+        <div class="section">
+            <h2>Glyph Groups</h2>
+            <div style="display: flex; gap: 2rem; flex-wrap: wrap;">
+                <div>
+                    <p style="margin-bottom: 0.5rem; font-weight: 500;">Horizontal Group</p>
+                    <div class="bg-glyph-group">
+                        <span class="bg-glyph bg-identity-dna bg-size-lg"></span>
+                        <span class="bg-glyph bg-state-active bg-size-lg"></span>
+                        <span class="bg-glyph bg-state-protected bg-size-lg"></span>
+                        <span class="bg-glyph bg-governance-certified bg-size-lg"></span>
+                    </div>
+                </div>
+                <div>
+                    <p style="margin-bottom: 0.5rem; font-weight: 500;">Vertical Stack</p>
+                    <div class="bg-glyph-stack">
+                        <span class="bg-glyph bg-events-start bg-size-lg"></span>
+                        <span class="bg-glyph bg-reflection-mirror bg-size-lg"></span>
+                        <span class="bg-glyph bg-data-memory bg-size-lg"></span>
+                        <span class="bg-glyph bg-events-stop bg-size-lg"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Interactive -->
+        <div class="section">
+            <h2>Interactive Glyphs</h2>
+            <p style="margin-bottom: 1rem; color: #6b7280;">Hover and click to interact</p>
+            <div style="display: flex; gap: 1rem;">
+                <span class="bg-glyph bg-navigation-home bg-size-2xl bg-interactive"
+                      onclick="alert('Home clicked!')"></span>
+                <span class="bg-glyph bg-navigation-forward bg-size-2xl bg-interactive"
+                      onclick="alert('Forward clicked!')"></span>
+                <span class="bg-glyph bg-events-cycle bg-size-2xl bg-interactive"
+                      onclick="alert('Refresh clicked!')"></span>
+                <span class="bg-glyph bg-reflection-mirror bg-size-2xl bg-interactive"
+                      onclick="alert('Reflect clicked!')"></span>
+            </div>
+        </div>
+
+        <footer>
+            <p><strong>BeaconGlyphs v1.0.0</strong> - Visual and symbolic language for MirrorDNA</p>
+            <p style="margin-top: 0.5rem; font-size: 0.875rem;">
+                25 glyphs • SVG assets • CSS components • React library
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        // Glyph data
+        const glyphs = [
+            { id: 'continuity-chain', name: 'Continuity Chain', category: 'Continuity' },
+            { id: 'continuity-link', name: 'Single Link', category: 'Continuity' },
+            { id: 'continuity-infinity', name: 'Infinite Continuity', category: 'Continuity' },
+            { id: 'continuity-broken', name: 'Broken Chain', category: 'Continuity' },
+            { id: 'identity-dna', name: 'DNA Helix', category: 'Identity' },
+            { id: 'identity-mask', name: 'Persona Mask', category: 'Identity' },
+            { id: 'identity-diamond', name: 'Identity Diamond', category: 'Identity' },
+            { id: 'state-verified', name: 'Verified', category: 'State' },
+            { id: 'state-active', name: 'Active State', category: 'State' },
+            { id: 'state-protected', name: 'Protected', category: 'State' },
+            { id: 'state-locked', name: 'Locked', category: 'State' },
+            { id: 'events-flag', name: 'Event Flag', category: 'Events' },
+            { id: 'events-cycle', name: 'Cycle Event', category: 'Events' },
+            { id: 'events-warning', name: 'Warning Event', category: 'Events' },
+            { id: 'events-start', name: 'Start Event', category: 'Events' },
+            { id: 'events-stop', name: 'Stop Event', category: 'Events' },
+            { id: 'reflection-mirror', name: 'Mirror', category: 'Reflection' },
+            { id: 'reflection-bidirectional', name: 'Bidirectional', category: 'Reflection' },
+            { id: 'reflection-recursive', name: 'Recursive', category: 'Reflection' },
+            { id: 'governance-balance', name: 'Balance', category: 'Governance' },
+            { id: 'governance-certified', name: 'Certified', category: 'Governance' },
+            { id: 'navigation-home', name: 'Home', category: 'Navigation' },
+            { id: 'navigation-forward', name: 'Forward', category: 'Navigation' },
+            { id: 'data-memory', name: 'Memory', category: 'Data' },
+            { id: 'data-stream', name: 'Data Stream', category: 'Data' },
+        ];
+
+        // Render glyph gallery
+        const gallery = document.getElementById('glyphGallery');
+        glyphs.forEach(glyph => {
+            const item = document.createElement('div');
+            item.className = 'showcase-item';
+            item.innerHTML = `
+                <div class="glyph-display">
+                    <span class="bg-glyph bg-${glyph.id} bg-size-2xl"></span>
+                </div>
+                <div class="label">${glyph.name}</div>
+                <div class="description">${glyph.category}</div>
+                <div style="margin-top: 0.5rem;">
+                    <code>.bg-${glyph.id}</code>
+                </div>
+            `;
+            gallery.appendChild(item);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeaconGlyphs - Visual Language for MirrorDNA Ecosystem</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>🔮 BeaconGlyphs</h1>
+        <p class="tagline">Visual and symbolic language system for MirrorDNA / LingOS / ActiveMirrorOS</p>
+        <nav>
+            <a href="#brand-glyphs">Brand Glyphs</a>
+            <a href="#symbolic-glyphs">Symbolic Glyphs</a>
+            <a href="#usage">Usage</a>
+            <a href="#integration">Integration</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Brand / Product Glyphs Section -->
+        <section id="brand-glyphs" class="glyph-section">
+            <h2>Brand & Product Glyphs</h2>
+            <p class="section-desc">Core visual identities for MirrorDNA ecosystem products and frameworks.</p>
+            <div id="brand-glyphs-grid" class="glyph-grid"></div>
+        </section>
+
+        <!-- Symbolic Glyphs Section -->
+        <section id="symbolic-glyphs" class="glyph-section">
+            <h2>Symbolic Glyphs</h2>
+            <p class="section-desc">25 semantic glyphs for states, events, continuity, identity, and reflection.</p>
+
+            <div class="category-section">
+                <h3>Continuity</h3>
+                <div id="continuity-glyphs" class="glyph-grid"></div>
+            </div>
+
+            <div class="category-section">
+                <h3>Identity</h3>
+                <div id="identity-glyphs" class="glyph-grid"></div>
+            </div>
+
+            <div class="category-section">
+                <h3>State</h3>
+                <div id="state-glyphs" class="glyph-grid"></div>
+            </div>
+
+            <div class="category-section">
+                <h3>Events</h3>
+                <div id="events-glyphs" class="glyph-grid"></div>
+            </div>
+
+            <div class="category-section">
+                <h3>Reflection</h3>
+                <div id="reflection-glyphs" class="glyph-grid"></div>
+            </div>
+
+            <div class="category-section">
+                <h3>Governance</h3>
+                <div id="governance-glyphs" class="glyph-grid"></div>
+            </div>
+
+            <div class="category-section">
+                <h3>Navigation</h3>
+                <div id="navigation-glyphs" class="glyph-grid"></div>
+            </div>
+
+            <div class="category-section">
+                <h3>Data</h3>
+                <div id="data-glyphs" class="glyph-grid"></div>
+            </div>
+        </section>
+
+        <!-- Usage Examples Section -->
+        <section id="usage" class="usage-section">
+            <h2>Usage Examples</h2>
+
+            <div class="usage-example">
+                <h3>HTML + Direct SVG</h3>
+                <pre><code>&lt;img src="assets/svg/mirrordna.svg" alt="MirrorDNA" width="48" height="48"&gt;</code></pre>
+            </div>
+
+            <div class="usage-example">
+                <h3>React Component</h3>
+                <pre><code>import { BeaconGlyph } from 'beaconglyphs/react';
+
+&lt;BeaconGlyph name="mirrordna" size="lg" /&gt;
+&lt;BeaconGlyph name="continuity-chain" size="md" /&gt;</code></pre>
+            </div>
+
+            <div class="usage-example">
+                <h3>CSS Utilities</h3>
+                <pre><code>&lt;span class="glyph glyph-md" style="background-image: url('../assets/svg/lingos.svg')"&gt;&lt;/span&gt;</code></pre>
+            </div>
+        </section>
+
+        <!-- Integration Guide Section -->
+        <section id="integration" class="integration-section">
+            <h2>Integration Guide</h2>
+            <div class="integration-grid">
+                <div class="integration-card">
+                    <h3>📦 NPM Package</h3>
+                    <pre><code>npm install beaconglyphs</code></pre>
+                    <p>Use React components or import SVGs directly.</p>
+                </div>
+                <div class="integration-card">
+                    <h3>🎨 Direct Assets</h3>
+                    <p>Copy SVGs from <code>assets/svg/</code> to your project.</p>
+                </div>
+                <div class="integration-card">
+                    <h3>💅 CSS Utilities</h3>
+                    <pre><code>@import 'beaconglyphs/css';</code></pre>
+                    <p>Use pre-built utility classes for sizing and styling.</p>
+                </div>
+                <div class="integration-card">
+                    <h3>📚 Documentation</h3>
+                    <p>See <code>docs/</code> for comprehensive guides on usage, branding, and integration.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p><strong>BeaconGlyphs v1.0.0</strong> | Part of the MirrorDNA ecosystem</p>
+        <p>Brand names and trademarks © N1 Intelligence Inc.</p>
+        <p>
+            <a href="https://github.com/MirrorDNA-Reflection-Protocol/BeaconGlyphs">GitHub</a> |
+            <a href="../docs/overview.md">Documentation</a> |
+            <a href="../LICENSE">License</a>
+        </p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

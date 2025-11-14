@@ -1,0 +1,19 @@
+<!-- TrustByDesign Brand Glyph -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <title>TrustByDesign</title>
+  <desc>Safety and governance framework</desc>
+
+  <!-- Shield -->
+  <g fill="none" stroke="currentColor" stroke-width="2">
+    <path d="M24 4 L40 12 L40 24 Q40 36, 24 44 Q8 36, 8 24 L8 12 Z"/>
+
+    <!-- Check mark inside shield -->
+    <polyline points="16 24 22 30 32 18" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Balance scales symbol (small) -->
+  <g opacity="0.3" fill="currentColor">
+    <circle cx="18" cy="14" r="1"/>
+    <circle cx="30" cy="14" r="1"/>
+  </g>
+</svg>
