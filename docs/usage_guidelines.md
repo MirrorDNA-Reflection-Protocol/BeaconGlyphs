@@ -2,6 +2,8 @@
 
 Sizing, spacing, color, and visual consistency rules for BeaconGlyphs.
 
+**⚠️ INFORMATIONAL ONLY:** These guidelines are informational research outputs, not prescriptive requirements. Implementation decisions remain the responsibility of developers and designers. See [/LEGAL_NOTICE.md](/LEGAL_NOTICE.md) for complete disclaimers.
+
 ---
 
 ## Sizing

@@ -1,8 +1,27 @@
-# BeaconGlyphs
+# BeaconGlyphs ⟡⟦CANONICAL⟧
 
 **Visual symbol system for the MirrorDNA Constellation**
 
 BeaconGlyphs provides 32 production-ready SVG glyphs that represent brands, states, events, and interactions across the MirrorDNA ecosystem. This repository is the canonical source for all visual symbols used in Glyphtrail, LingOS, Active MirrorOS, and other MirrorDNA products.
+
+---
+
+## 🛡️ Reflective AI Compliance
+
+**Bound to Master Citation v15.2**
+
+![Reflective AI](https://img.shields.io/badge/Reflective_AI-Compliant-blue)
+![Master Citation](https://img.shields.io/badge/Master_Citation-v15.2-green)
+![FEU Contract](https://img.shields.io/badge/FEU-Enforced-orange)
+
+**Fact/Estimate/Unknown Contract:**
+- All symbolic representations are **FACT** (verified design artifacts)
+- Integration guidance may contain **ESTIMATE** (implementation suggestions)
+- Real-world performance outcomes are **UNKNOWN** (context-dependent)
+
+**⚠️ LEGAL NOTICE:** This is a research prototype. See [LEGAL_NOTICE.md](LEGAL_NOTICE.md) for complete disclaimers regarding medical advice, autonomy, and trademark usage.
+
+---
 
 **Continuity Link:**
 BeaconGlyphs v1.x is governed by **Master Citation v15.2**, ensuring symbolic consistency across all MirrorDNA visual systems.

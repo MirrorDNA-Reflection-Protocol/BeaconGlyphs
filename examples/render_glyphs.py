@@ -3,6 +3,9 @@
 BeaconGlyphs - Python Usage Example
 
 Demonstrates how to load and use the glyph registry in a Python application.
+
+FEU CONTRACT: Fact/Estimate/Unknown enforced | Bound to Master Citation v15.2
+DISCLAIMER: Research prototype - informational output only | See /LEGAL_NOTICE.md
 """
 
 import json

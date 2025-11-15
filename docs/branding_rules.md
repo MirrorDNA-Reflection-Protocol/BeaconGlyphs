@@ -2,6 +2,8 @@
 
 Guidelines for using BeaconGlyphs in branding, marketing, partner integrations, and third-party applications.
 
+**⚠️ INFORMATIONAL ONLY:** These guidelines provide information only and do not constitute legal counsel. Consult qualified legal professionals for trademark and licensing questions. See [/LEGAL_NOTICE.md](/LEGAL_NOTICE.md) for complete disclaimers.
+
 ---
 
 ## Ownership & Trademarks

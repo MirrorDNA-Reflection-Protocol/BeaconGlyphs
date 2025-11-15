@@ -4,6 +4,9 @@ BeaconGlyphs Registry Validator
 
 Validates the glyph registry against the JSON schema and performs
 additional semantic checks to ensure consistency and quality.
+
+FEU CONTRACT: Fact/Estimate/Unknown enforced | Bound to Master Citation v15.2
+DISCLAIMER: Research prototype - informational output only | See /LEGAL_NOTICE.md
 """
 
 import json

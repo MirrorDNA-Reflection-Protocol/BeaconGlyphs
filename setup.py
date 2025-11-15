@@ -1,5 +1,8 @@
 """
 BeaconGlyphs - Visual and symbolic language for the MirrorDNA ecosystem
+
+FEU CONTRACT: Fact/Estimate/Unknown enforced | Bound to Master Citation v15.2
+DISCLAIMER: Research prototype - informational output only | See /LEGAL_NOTICE.md
 """
 
 from setuptools import setup, find_packages
@@ -11,7 +14,7 @@ long_description = readme_path.read_text(encoding="utf-8") if readme_path.exists
 
 setup(
     name="beaconglyphs",
-    version="1.0.0",
+    version="0.2.0-hardening",
     description="Visual and symbolic language system for the MirrorDNA ecosystem",
     long_description=long_description,
     long_description_content_type="text/markdown",
@@ -48,5 +51,5 @@ setup(
         "Topic :: Software Development :: Libraries",
         "Topic :: Multimedia :: Graphics",
     ],
-    keywords="glyphs symbols iconography mirrordna continuity identity",
+    keywords="MirrorDNA Reflective-AI ActiveMirrorOS LingOS glyphs symbols iconography continuity identity",
 )

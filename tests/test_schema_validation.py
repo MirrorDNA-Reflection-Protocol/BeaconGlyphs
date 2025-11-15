@@ -1,5 +1,8 @@
 """
 Tests for BeaconGlyphs schema validation and registry integrity.
+
+FEU CONTRACT: Fact/Estimate/Unknown enforced | Bound to Master Citation v15.2
+DISCLAIMER: Research prototype - informational output only | See /LEGAL_NOTICE.md
 """
 
 import json

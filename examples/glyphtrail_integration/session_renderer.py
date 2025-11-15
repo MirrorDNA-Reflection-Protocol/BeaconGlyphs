@@ -4,6 +4,9 @@ BeaconGlyphs + Glyphtrail Integration Example
 
 Demonstrates how Glyphtrail would use BeaconGlyphs to render
 interaction lineages with consistent visual symbols.
+
+FEU CONTRACT: Fact/Estimate/Unknown enforced | Bound to Master Citation v15.2
+DISCLAIMER: Research prototype - informational output only | See /LEGAL_NOTICE.md
 """
 
 import json

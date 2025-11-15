@@ -1,6 +1,9 @@
 /**
  * BeaconGlyphs - Glyph Registry
  * Maps glyph names to their SVG paths
+ *
+ * FEU CONTRACT: Fact/Estimate/Unknown enforced | Bound to Master Citation v15.2
+ * DISCLAIMER: Research prototype - informational output only | See /LEGAL_NOTICE.md
  */
 
 export interface GlyphDefinition {

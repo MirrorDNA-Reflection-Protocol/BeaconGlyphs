@@ -1,6 +1,6 @@
 {
   "name": "@beaconglyphs/react",
-  "version": "1.0.0",
+  "version": "0.2.0-hardening",
   "description": "React components for BeaconGlyphs - visual language for MirrorDNA ecosystem",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -17,6 +17,10 @@
   "keywords": [
     "beaconglyphs",
     "mirrordna",
+    "MirrorDNA",
+    "Reflective-AI",
+    "ActiveMirrorOS",
+    "LingOS",
     "react",
     "icons",
     "glyphs"

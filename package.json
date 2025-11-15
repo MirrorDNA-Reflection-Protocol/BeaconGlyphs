@@ -1,6 +1,6 @@
 {
   "name": "beaconglyphs",
-  "version": "1.0.0",
+  "version": "0.2.0-hardening",
   "description": "Visual and symbolic language system for the MirrorDNA ecosystem",
   "main": "components/react/index.js",
   "types": "components/react/index.d.ts",
@@ -23,6 +23,10 @@
   "keywords": [
     "beaconglyphs",
     "mirrordna",
+    "MirrorDNA",
+    "Reflective-AI",
+    "ActiveMirrorOS",
+    "LingOS",
     "glyphs",
     "icons",
     "symbols",
